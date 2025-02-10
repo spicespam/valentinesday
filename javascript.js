@@ -123,6 +123,14 @@ function darkmode() {
     textElement.innerHTML = isOriginalText ? newText : originalText;
     headerElement.innerHTML = isOriginalText ? newHead : originalHead;
     isOriginalText = !isOriginalText; // Flip the flag
+
+    let favicon = document.querySelector("link[rel='icon']");
+    if (!favicon) {
+        favicon = document.createElement("link");
+        favicon.rel = "icon";
+        document.head.appendChild(favicon);
+    }
+    favicon.href = isOriginalText ? "media/favicon-light.ico" : "media/favicon-dark.ico";
     
 }
 
