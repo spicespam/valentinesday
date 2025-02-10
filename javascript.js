@@ -8,6 +8,11 @@ function playSound() {
     audio.play();
 }
 
+function playHonk() {
+    const audio = new Audio("media/Fnaf Nose honk [RfejhLuaszw].mp3");
+    audio.play();
+}
+
 
 function generator() {
     const sharkyLines = [
